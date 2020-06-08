@@ -9,6 +9,7 @@ public class Operators {
         height = scanner.nextFloat();
         System.out.println("Nhap vao chieu rong:");
         width = scanner.nextFloat();
-        System.out.println("Dien tich hinh chu nhat la: " + width * height);
+        float area = width * height;
+        System.out.println("Dien tich hinh chu nhat la: " + area);
     }
 }
