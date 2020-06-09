@@ -9,20 +9,24 @@ public class SimpleEquation {
         a = scanner.nextFloat();
         System.out.println("Please enter b.");
         b = scanner.nextFloat();
-        float x;
+        System.out.println(solveSimpleEquation(a,b));
+    }
+
+    public static String solveSimpleEquation(float a, float b) {
+        String x;
         if (a == 0) {
             if (b == 0) {
-                System.out.println("The Equation has coutless root");
+                x = "Countless root";
             } else {
-                System.out.println("The Equation has no root");
+                x = "No root";
             }
         } else {
             if (b == 0) {
-                x = 0;
+                x = "0";
             } else {
-                x = -b/a;
+                x = "The root is: " + -b/a;
             }
-            System.out.println("The root is: " + x);
         }
+        return x;
     }
 }

@@ -3,13 +3,16 @@ import java.util.Scanner;
 public class NumberToWord {
     public static void main(String[] args) {
         int number;
-        String word = "";
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter number:");
         number = scanner.nextInt();
+        System.out.printf("%d in words: " + numberInWords(number),number);
+    }
+    public static String numberInWords(int number){
         int hundredsNum = Math.floorDiv(number, 100);
         int tensNum = Math.floorDiv(Math.floorMod(number, 100), 10);
         int onesNum = Math.floorMod(number, 10);
+        String word = "";
         String hundredsWord;
         String tensWord;
         String onesWord;
@@ -151,6 +154,6 @@ public class NumberToWord {
         } else {
             word = tensWord + " " + onesWord;
         }
-        System.out.printf("%d in words: " + word, number);
+        return word;
     }
 }

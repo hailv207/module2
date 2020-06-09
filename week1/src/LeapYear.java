@@ -6,6 +6,10 @@ public class LeapYear {
         System.out.println("Please enter the year you want to check Leap Year");
         Scanner scanner = new Scanner(System.in);
         year = scanner.nextInt();
+        System.out.printf("Lear year checking result of %d: %B", year, checkLeapYear(year));
+    }
+
+    public static boolean checkLeapYear(int year) {
         boolean isLeapYear = false;
         boolean isDivisibleBy4 = year % 4 == 0;
         boolean isDivisibleBy100 = year % 100 == 0;
@@ -14,9 +18,7 @@ public class LeapYear {
             if ((isDivisibleBy4 && !isDivisibleBy100) || (isDivisibleBy100 && isDivisibleBy400)) {
                 isLeapYear = true;
             }
-            System.out.printf("Leap Year checking result of %d: %B", year, isLeapYear);
-        } else {
-            System.out.println("Invalid Year.");
         }
+        return isLeapYear;
     }
 }

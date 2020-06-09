@@ -6,6 +6,9 @@ public class Greeting {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter your name:");
         name = scanner.nextLine();
-        System.out.printf("Hello %S",name);
+        System.out.println(greet(name));
+    }
+    public static String greet(String name){
+        return "Hello " + name;
     }
 }

@@ -6,6 +6,10 @@ public class DayOfMonth {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter the month you want to know the number of days");
         month = scanner.nextInt();
+        System.out.println(daysOfMonth(month));
+    }
+
+    public static String daysOfMonth(int month) {
         String daysInMonth;
         switch (month) {
             case 1:
@@ -31,9 +35,9 @@ public class DayOfMonth {
                 break;
         }
         if (daysInMonth == "") {
-            System.out.println("Invalid month");
+            return "Invalid month";
         } else {
-            System.out.println("The month " + month + " has " + daysInMonth + " days");
+            return "The month " + month + " has " + daysInMonth + " days";
         }
     }
 }
