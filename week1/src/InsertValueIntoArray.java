@@ -9,7 +9,6 @@ public class InsertValueIntoArray {
         System.out.println("Please enter the value:");
         int value = scanner.nextInt();
         System.out.println("Please enter the index your want to insert value:");
-        ;
         int index = scanner.nextInt();
         insertValueIntoArray(value, index, array);
         System.out.println("The new Array:");
@@ -17,9 +16,13 @@ public class InsertValueIntoArray {
     }
 
     public static void insertValueIntoArray(int value, int index, int[] array) {
-        for (int i = array.length - 1; i >= index; i--) {
-            array[i] = array[i - 1];
+        if (index < 0 || index > array.length - 1) {
+            System.out.println("The index is not in Array.");
+        } else {
+            for (int i = array.length - 1; i > index; i--) {
+                array[i] = array[i - 1];
+            }
+            array[index] = value;
         }
-        array[index] = value;
     }
 }
