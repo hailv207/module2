@@ -5,7 +5,7 @@ public class Shapes {
         int choice;
         do {
             System.out.println("Please enter your choice:");
-            System.out.println("1. Draw Rectangle.");
+            System.out.println("1. Draw Rectangle.Rectangle.");
             System.out.println("2. Draw Square Triangle.");
             System.out.println("3. Draw Isosceles Triangle.");
             System.out.println("4. Exit.");

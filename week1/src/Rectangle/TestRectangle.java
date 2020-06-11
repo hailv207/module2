@@ -1,3 +1,5 @@
+package Rectangle;
+
 import java.util.Scanner;
 import java.util.concurrent.locks.ReadWriteLock;
 

@@ -1,3 +1,5 @@
+package Rectangle;
+
 public class Rectangle {
     private double width;
     private double height;
@@ -12,6 +14,6 @@ public class Rectangle {
         return this.width * this.height;
     }
     public String display(){
-        return "Rectangle{width: " + this.width + ", height: " + this.height + "}";
+        return "Rectangle.Rectangle{width: " + this.width + ", height: " + this.height + "}";
     }
 }
