@@ -7,14 +7,14 @@ public class QuadraticEquation {
     }
     public double getRoot1(){
         if (this.getDiscriminant() >= 0){
-            return -this.b - Math.sqrt(this.getDiscriminant()) / 2 / this.a;
+            return (-this.b - Math.sqrt(this.getDiscriminant())) / 2 / this.a;
         }else {
             return 0;
         }
     }
     public double getRoot2(){
         if (this.getDiscriminant() >= 0){
-            return -this.b + Math.sqrt(this.getDiscriminant()) / 2 / this.a;
+            return (-this.b + Math.sqrt(this.getDiscriminant())) / 2 / this.a;
         }else {
             return 0;
         }
