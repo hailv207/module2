@@ -1,5 +1,4 @@
 package point_and_moveablepoint;
-
 public class Test {
     public static void main(String[] args) {
         Point p1 = new Point(4,5);
@@ -9,6 +8,5 @@ public class Test {
         p2.setSpeed(2,2);
         System.out.println(p2.toString());
         System.out.println(p2.move().toString());
-
     }
 }
