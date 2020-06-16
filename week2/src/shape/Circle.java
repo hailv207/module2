@@ -1,6 +1,6 @@
 package shape;
 
-public class Circle extends Shape implements Resizeable{
+public class Circle extends Shape implements Resizeable {
     protected double radius;
 
     public Circle() {
@@ -16,6 +16,7 @@ public class Circle extends Shape implements Resizeable{
         this.radius = radius;
     }
 
+    @Override
     protected double getArea() {
         return this.radius * this.radius * Math.PI;
     }
@@ -39,8 +40,8 @@ public class Circle extends Shape implements Resizeable{
 
     @Override
     public void resize(double percent) {
-        if (percent >= 0 && percent <= 200){
-            this.setRadius(this.getRadius() * percent/100);
+        if (percent >= 0 && percent <= 200) {
+            this.setRadius(this.getRadius() * percent / 100);
         }
     }
 }

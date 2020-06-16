@@ -1,6 +1,6 @@
 package shape;
 
-public class Square extends Rectangle {
+public class Square extends Rectangle implements Colorable{
     public Square() {
         this.width = 1.0;
         this.length = 1.0;
@@ -41,4 +41,8 @@ public class Square extends Rectangle {
         return "A Square with side=" + this.getSize() + ", which is a subclass of " + super.toString();
     }
 
+    @Override
+    public void howToColor(String color) {
+        this.setColor(color);
+    }
 }
