@@ -3,7 +3,7 @@ package shape;
 import com.sun.corba.se.impl.encoding.CDROutputObject;
 import sun.jvm.hotspot.types.JDoubleField;
 
-public class Rectangle extends Shape{
+public class Rectangle extends Shape implements Resizeable{
 protected double width;
 protected double length;
 public Rectangle(){
@@ -47,5 +47,13 @@ protected double getPerimeter(){
         return "A Rectangle with width=" + this.getWidth()
                 + " and length=" + this.getLength()
                 + ", which is a subclass of " + super.toString();
+    }
+
+    @Override
+    public void resize(double percent) {
+        if (percent >= 0 && percent <= 200){
+            this.setLength(this.getLength() * percent/100);
+            this.setWidth(this.getWidth() * percent/100);
+        }
     }
 }
